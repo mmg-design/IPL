@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Calendar</title>
+<meta name="description" content="Seven-week launch plan for the Inge Performance Lab website rebuild, prepared by MMG Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Tiempos Headline';src:url('TestTiemposHeadline-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+:root{
+  --deep:#1D475E; --bright:#4AA2C0; --mint:#EAF5F7; --navy:#131B30; --white:#FFFFFF; --muted:#5F7A8A;
+  --divider:rgba(29,71,94,.12);
+  --shadow-card:0 2px 8px rgba(29,71,94,.06),0 8px 24px rgba(29,71,94,.08);
+  --shadow-card-lg:0 4px 12px rgba(29,71,94,.08),0 16px 48px rgba(29,71,94,.12);
+  --shadow-elevated:0 8px 32px rgba(29,71,94,.14);
+  --shadow-subtle:0 1px 4px rgba(29,71,94,.06);
+  --fh:'Tiempos Headline','DM Serif Display',Georgia,serif;
+  --fb:'DM Sans','PP Neue Montreal','Helvetica Neue',Helvetica,Arial,sans-serif;
+  /* phase tints, all within teal to navy */
+  --p1:#A9D6E4; --p2:#4AA2C0; --p3:#1D475E; --p4:#131B30;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--mint);color:var(--navy);font-family:var(--fb);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--bright)}
+
+/* ── Hero ── */
+.hero{background:linear-gradient(135deg,#1D475E 0%,#27617D 100%);color:var(--white);padding:72px 24px 120px}
+.wrap{max-width:1200px;margin:0 auto}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.72);margin:0 0 16px;animation:rise .6s ease-out both}
+h1{font-family:var(--fh);font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;letter-spacing:-.015em;margin:0;max-width:760px;animation:rise .6s .12s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* ── Board ── */
+.board{margin-top:-72px;padding:0 24px 96px}
+.panel{background:var(--white);border-radius:14px;box-shadow:var(--shadow-elevated);padding:28px;overflow:visible;animation:rise .7s .4s ease-out both}
+.legend{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;padding-bottom:22px;border-bottom:1px solid var(--divider);margin-bottom:22px}
+.lg{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--deep);cursor:pointer;padding:6px 10px;border-radius:8px;transition:background .25s ease,transform .25s ease;user-select:none}
+.lg:hover{background:var(--mint);transform:translateY(-1px)}
+.lg.active{background:var(--deep);color:#fff}
+.sw{width:14px;height:14px;border-radius:4px;flex:none}
+.sw.p1{background:var(--p1)}.sw.p2{background:var(--p2)}.sw.p3{background:var(--p3)}.sw.p4{background:var(--p4)}
+.sw.meet{background:var(--mint);border:1px dashed rgba(29,71,94,.5)}
+.sw.call{background:#fff;border:2px solid var(--deep);border-radius:50%}
+.legend .spacer{flex:1}
+.legend .note{font-size:13px;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:150px repeat(5,1fr) .55fr .55fr;gap:0;border:1px solid var(--divider);border-radius:12px;overflow:visible}
+.gh.wk{border-top-left-radius:12px}.gh:last-child{border-top-right-radius:12px}
+.row:last-child .wkcell{border-bottom-left-radius:12px}.row:last-child .day:last-child{border-bottom-right-radius:12px}
+.gh{background:var(--mint);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:12px 12px;border-bottom:1px solid var(--divider)}
+.gh.wk{color:var(--deep)}
+.row{display:contents}
+.wkcell{padding:14px 14px;border-top:1px solid var(--divider);border-right:1px solid var(--divider);background:#fff;position:relative}
+.wkcell .wn{font-family:var(--fh);font-size:26px;color:var(--deep);line-height:1}
+.wkcell .wl{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.35}
+.wkcell .ph{display:inline-block;margin-top:10px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:5px;color:#fff}
+.ph.p1{background:var(--p1);color:var(--deep)}.ph.p2{background:var(--p2)}.ph.p3{background:var(--p3)}.ph.p4{background:var(--p4)}
+.day{min-height:112px;padding:10px 8px 12px;border-top:1px solid var(--divider);border-right:1px solid var(--divider);background:#fff;transition:background .25s ease}
+.day:last-child{border-right:0}
+.day.we{background:#F3FAFB}
+.day.hol{background:repeating-linear-gradient(135deg,#F3FAFB 0 8px,#E6F3F6 8px 16px)}
+.day .dn{font-size:12px;font-weight:600;color:var(--muted);display:flex;justify-content:space-between;align-items:baseline}
+.day .dn .m{font-weight:400;font-size:11px}
+.day.today .dn{color:var(--bright)}
+.day .hl{font-size:11px;color:var(--muted);margin-top:8px;font-style:italic}
+
+/* ── Milestones ── */
+.meet{margin-top:8px;padding:5px 10px;border-radius:6px;font-size:12px;font-weight:500;color:var(--deep);background:var(--mint);border:1px dashed rgba(29,71,94,.35);transition:opacity .25s ease}
+.grid.filtering .meet:not(.on){opacity:.18}
+.ms{position:relative;margin-top:8px;padding:8px 10px 8px 12px;border-radius:8px;font-size:13px;line-height:1.35;font-weight:500;color:#fff;cursor:default;box-shadow:var(--shadow-subtle);transition:transform .25s ease,box-shadow .25s ease,opacity .25s ease,filter .25s ease;border-left:3px solid transparent}
+.ms.p1{background:var(--p1);color:var(--deep)}.ms.p2{background:var(--p2)}.ms.p3{background:var(--p3)}.ms.p4{background:var(--p4)}
+.ms.client{background:#fff;color:var(--deep);border:1.5px dashed var(--bright);border-left:3px dashed var(--bright)}
+.ms.call::before{content:"";position:absolute;right:8px;top:9px;width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.9}
+.ms.call{padding-right:24px}
+.ms:hover,.ms:focus-visible{transform:translateY(-2px);box-shadow:var(--shadow-card-lg);z-index:5;outline:none}
+.grid.filtering .ms:not(.on){opacity:.18;filter:saturate(.3)}
+.ms .tip{position:absolute;left:0;top:calc(100% + 8px);width:300px;background:var(--white);color:var(--navy);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow-card-lg);opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .22s ease,transform .22s ease,visibility 0s .22s;z-index:50;font-weight:400;pointer-events:none}
+.ms:hover .tip,.ms:focus-visible .tip{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.tip .tt{font-family:var(--fh);font-size:19px;line-height:1.2;color:var(--deep);margin:0 0 6px}
+.tip .td{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:8px}
+.tip p{margin:0;font-size:14px;line-height:1.55;color:var(--navy)}
+.tip .own{margin-top:10px;font-size:12px;color:var(--muted)}
+.tip .own b{color:var(--deep);font-weight:600}
+.day.r .ms .tip{left:auto;right:0}
+
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:36px 24px;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer b{color:#fff;font-weight:600}
+
+@media (max-width:980px){
+  .grid{grid-template-columns:120px repeat(7,1fr)}
+  .ms .tip{width:240px}
+}
+@media (max-width:720px){
+  .hero{padding:56px 16px 96px}
+  .board{padding-left:16px;padding-right:16px}
+  .panel{padding:16px}
+  .grid{display:block;border:0}
+  .gh{display:none}
+  .row{display:block;margin-bottom:18px;border:1px solid var(--divider);border-radius:12px;overflow:hidden}
+  .wkcell{border:0;background:var(--mint)}
+  .day{border-right:0;min-height:0}
+  .day.empty{display:none}
+  .ms .tip{position:static;opacity:1;visibility:visible;transform:none;width:auto;margin-top:10px;box-shadow:none;border:1px solid var(--divider);display:none}
+  .ms.open .tip{display:block}
+  .ms{cursor:pointer}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Inge Performance Lab × MMG Studio</p>
+    <h1>Project Calendar</h1>
+  </div>
+</section>
+
+<section class="board">
+  <div class="wrap panel">
+    <div class="legend" id="legend">
+      <div class="lg" data-f="p1"><span class="sw p1"></span>Onboarding</div>
+      <div class="lg" data-f="p2"><span class="sw p2"></span>Design</div>
+      <div class="lg" data-f="p3"><span class="sw p3"></span>Development</div>
+      <div class="lg" data-f="p4"><span class="sw p4"></span>Launch</div>
+      <div class="lg" data-f="call"><span class="sw call"></span>In-person meeting</div>
+      <div class="lg" data-f="meet"><span class="sw meet"></span>Weekly check-in (Wed)</div>
+      <div class="spacer"></div>
+      <div class="note">Hover a date for detail. Click a legend item to focus.</div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>MMG Studio</b> · Columbus, Ohio · Prepared October 7, 2026</div>
+    <div>Inge Performance Lab · Brighton, Michigan · ingeperformancelab.com</div>
+  </div>
+</footer>
+
+<script>
+const M = [
+ ['2026-10-08','Kickoff meeting','p1','call','First in-person meeting. Agree on the 7-week target, weekly Wednesday check-ins, and what IPL owns.','MMG + IPL'],
+ ['2026-10-14','Sitemap approved','p1','gate','Page list and navigation signed off. Design starts from here.','IPL'],
+ ['2026-10-21','Design system + wireframes','p2','','Type, color, spacing, and the wireframes for every key page, reviewed in the weekly meeting.','MMG'],
+ ['2026-10-28','Design review','p2','call','Homepage and inner page designs presented. One round of feedback.','MMG + IPL'],
+ ['2026-10-30','Design approval','p2','gate','Written sign-off. Development starts Monday.','IPL'],
+ ['2026-11-11','Staging site ready','p3','','All pages built in Webflow with pricing, forms, and Swift handoffs in place.','MMG'],
+ ['2026-11-18','Client testing review','p3','call gate','IPL team books through every flow on staging. Final feedback window.','MMG + IPL'],
+ ['2026-11-23','Final sign-off','p4','call','Go-ahead for the domain switch.','IPL'],
+ ['2026-11-24','Go live','p4','gate','DNS moves from Squarespace to Webflow. Redirects, sitemap, and analytics confirmed.','MMG'],
+ ['2026-12-01','Training','p4','call','IPL trained on the Webflow CMS. Retainer discussion.','MMG + IPL'],
+];
+const MEET = ['2026-10-14','2026-10-21','2026-10-28','2026-11-04','2026-11-11','2026-11-18'];
+const HOL = {'2026-11-26':'Thanksgiving','2026-11-27':'Holiday'};
+const weeks = [
+ ['2026-10-05','1','Oct 5 to 11','p1','Onboarding'],
+ ['2026-10-12','2','Oct 12 to 18','p1','Onboarding'],
+ ['2026-10-19','3','Oct 19 to 25','p2','Design'],
+ ['2026-10-26','4','Oct 26 to Nov 1','p2','Design'],
+ ['2026-11-02','5','Nov 2 to 8','p3','Development'],
+ ['2026-11-09','6','Nov 9 to 15','p3','Development'],
+ ['2026-11-16','7','Nov 16 to 22','p3','Dev + QA'],
+ ['2026-11-23','8','Nov 23 to 29','p4','Launch'],
+ ['2026-11-30','+','Nov 30 to Dec 6','p4','Post-launch'],
+];
+// project week labels: week 1 = Oct 8
+const projWeek = {'2026-10-05':'Wk 1','2026-10-12':'Wk 2','2026-10-19':'Wk 3','2026-10-26':'Wk 4','2026-11-02':'Wk 5','2026-11-09':'Wk 6','2026-11-16':'Wk 7','2026-11-23':'Launch','2026-11-30':'After'};
+const DN=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const g=document.getElementById('grid');
+const byDate={}; M.forEach(m=>{(byDate[m[0]]=byDate[m[0]]||[]).push(m)});
+function iso(d){return d.toISOString().slice(0,10)}
+let html='<div class="gh wk">Week</div>'+DN.map(d=>`<div class="gh">${d}</div>`).join('');
+weeks.forEach(w=>{
+  const start=new Date(w[0]+'T12:00:00');
+  html+=`<div class="row"><div class="wkcell"><div class="wn">${projWeek[w[0]]}</div><div class="wl">${w[2]}</div><span class="ph ${w[3]}">${w[4]}</span></div>`;
+  for(let i=0;i<7;i++){
+    const d=new Date(start); d.setDate(start.getDate()+i); const k=iso(d);
+    const we=i>=5; const hol=HOL[k]; const items=byDate[k]||[];
+    const cls=['day',we?'we':'',hol?'hol':'',i>=4?'r':'',items.length?'':'empty',k==='2026-10-07'?'today':''].join(' ');
+    html+=`<div class="${cls}"><div class="dn"><span>${d.getDate()}</span><span class="m">${MN[d.getMonth()]}</span></div>`;
+    if(hol) html+=`<div class="hl">${hol}</div>`;
+    if(k==='2026-10-07') html+=`<div class="hl">Today</div>`;
+    if(MEET.includes(k)) html+=`<div class="meet" data-flags="meet">Weekly check-in</div>`;
+    items.forEach(m=>{
+      const flags=m[3].split(' ').filter(Boolean);
+      const isClient=flags.includes('client');
+      const cls2=['ms',isClient?'client':m[2],...flags.filter(f=>f!=='client')].join(' ');
+      html+=`<div class="${cls2}" tabindex="0" data-phase="${m[2]}" data-flags="${m[3]}">${m[1]}
+        <div class="tip"><div class="td">${DN[i]}, ${MN[d.getMonth()]} ${d.getDate()} · ${{p1:'Onboarding',p2:'Design',p3:'Development',p4:'Launch'}[m[2]]}</div><div class="tt">${m[1]}</div><p>${m[4]}</p><div class="own">Owner: <b>${m[5]}</b>${flags.includes('gate')?' · <b>Gate</b>':''}</div></div></div>`;
+    });
+    html+='</div>';
+  }
+  html+='</div>';
+});
+g.innerHTML=html;
+
+// legend filtering
+let active=null;
+document.querySelectorAll('.lg').forEach(el=>{
+  el.addEventListener('click',()=>{
+    const f=el.dataset.f;
+    active = active===f?null:f;
+    document.querySelectorAll('.lg').forEach(x=>x.classList.toggle('active',x.dataset.f===active));
+    g.classList.toggle('filtering',!!active);
+    document.querySelectorAll('.ms,.meet').forEach(ms=>{
+      const flags=ms.dataset.flags.split(' ');
+      const on = !active || (active==='call'||active==='meet' ? flags.includes(active) : ms.dataset.phase===active);
+      ms.classList.toggle('on',on);
+    });
+  });
+});
+// mobile tap to expand
+document.querySelectorAll('.ms').forEach(ms=>ms.addEventListener('click',()=>{ if(window.matchMedia('(max-width:720px)').matches) ms.classList.toggle('open'); }));
+</script>
+</body>
+</html>
