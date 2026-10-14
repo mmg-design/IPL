@@ -201,3 +201,42 @@ Hero stays. Section modes: Hero Navy · Stats Deep · Facility White · Training
 - Section background = `setExplicitVariableModeForCollection(Color Schemes, mode)` on each Relume instance. Modes: Navy 5846:0 · Training White 10221:0 · Ice 10294:0 · Deep 10294:1.
 - Page root stays Navy. Nav stays Navy. Footer uses Deep.
 - Textures and gradients: next pass, once photography direction is locked. Modes carry the structure; texture is a paint layer on top.
+
+---
+
+## v2.1 additions (2026-10-14)
+
+### SEO eyebrows (hero taglines)
+| Page | Eyebrow |
+|---|---|
+| Home | Baseball and Softball Training Facility · Brighton, MI |
+| About | About Inge Performance Lab · Brighton, Michigan |
+| Contact | Contact IPL · Brighton, MI Baseball and Softball Facility |
+| Features (new) | Baseball and Softball Training Facility Features · Brighton, MI |
+| Batting Cages | Batting Cage Rentals · Brighton, MI |
+| HitTrax | HitTrax Batting Cages · Livingston County, MI |
+| The Den | Strength and Conditioning for Athletes · The Den powered by 2SP |
+| Training (new) | Baseball and Softball Training Programs · Brighton, MI |
+| Baseball Training | Baseball Lessons and Training · Brighton, MI |
+| Softball Training | Softball and Fastpitch Training · Brighton, MI |
+| Pitching | Pitching Lessons · High Performance Training at IPL |
+| Mental Performance | Champion Mindset Group · Exclusive Partner |
+| Team Rentals | Indoor Field and Cage Rentals for Teams · Brighton, MI |
+| Programs | Baseball and Softball Camps, Clinics and Leagues · Brighton, MI |
+| Program Template | [Sport] [Program Type] · Brighton, MI |
+| Memberships | Batting Cage and Training Memberships · Brighton, MI |
+| Book a Tour | Tour the Facility · Brighton, MI |
+| Support IPL | Sponsor and Partner with IPL · Livingston County, MI |
+
+Header 5 heroes are detached in Figma so a real Tagline node could be added above the H1 (the kit's image heroes have no eyebrow slot). Auto layout and variable bindings are intact.
+
+### New collection pages
+**Features** `/features` · H1: Everything Under One Roof. · Header 47 (Navy) · Layout 1 Cages (White) · Layout 3 HitTrax (Ice) · Layout 1 Infield (Navy) · Layout 3 Den (White) · Stats 13 (Deep) · CTA 27 (Deep).
+**Training** `/training` · H1: Pick Your Lane. · Header 47 (Navy) · Layout 1 Baseball (White) · Layout 3 Softball (Ice) · Layout 1 Pitching (Navy) · Layout 3 Mental (White) · Layout 1 Teams (Ice) · Testimonial 17 (Navy) · CTA 27 (Deep).
+Keyword targets on both data cards are marked [verify in SE Ranking].
+
+### Team sections
+About uses Team 6 (six square photo cards). Baseball and Softball Training use Team 12 (four wide photo cards). All social icon rows hidden.
+
+### CTA backgrounds
+CTA 27 "Content" frame renamed "Content (BG image slot)" with a Navy-to-Orange gradient placeholder until the background photo is supplied.
