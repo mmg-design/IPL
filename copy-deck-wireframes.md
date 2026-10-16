@@ -277,3 +277,10 @@ Hours: Mon to Fri 2 to 9pm, Sat 10am to 7pm, Sun 11am to 5pm. Phone 810-206-3763
 - Every eyebrow sits in a translucent pill (white 14% on dark sections, navy 8% on light), hairline ring, full radius.
 - CTA 27 and CTA 7: the Relume stock photo on the section fill is replaced with a project photo under a 70% navy scrim; headline bumped to Heading/H1.
 - Features page: all buttons Primary.
+
+### v2.6: tagline style, Home card grids, forms, pricing cleanup
+- All 85 eyebrow pills use Heading/Tagline (no Text/Tiny anywhere).
+- Home Facility = 3x1 cards and Training Paths = 2x2 cards, both built from the Layout 178 card (wide photo on top, pill, heading, body, bold caps link). Sections are detached frames.
+- Form fields (24 inputs/text areas across Contact, Book a Tour, footer newsletter): white fill + Iron Gray 1px on light sections, Navy Raised + Steel Base 1px on dark, 4px radius; labels in Text/Label caps; checkboxes 4px radius.
+- Pricing cards normalized: explicit Navy Raised, vertical auto layout, 32 padding, 24 gap, 180px image, consistent Price block spacing.
+- Heading styles are Gotham Regular in the file (H1 to H6, Display). Andy to set them to Bold in the Style Guide; MCP cannot load Gotham.
