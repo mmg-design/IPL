@@ -271,3 +271,9 @@ Hours: Mon to Fri 2 to 9pm, Sat 10am to 7pm, Sun 11am to 5pm. Phone 810-206-3763
 - Layout 371 and 254 reverted to 239 and 300 with a matching photo on every item.
 - From the "recommended components" section: Features page = Header 156 (four photo tiles) + Layout 357 (numbered four-feature list with photos, replacing four alternating sections). Training hero = Header 77 (six photos). Book a Tour hero = Header 78 (twelve-photo grid). Home Facility = Layout 370 (bento with three photos). Four-item sections on Home, Batting Cages, HitTrax and Memberships = Layout 399 (four photo cards with tag, heading, body, link).
 - Buttons: no icons/arrows anywhere, no shadows on buttons (ring and gradient kept). Pricing card shadows kept.
+
+### v2.5: pricing image slots, eyebrow pills, CTA backgrounds
+- Pricing sections are detached frames now; every card is Navy Raised with a 180px landscape "Card Image" slot at the top (photo from the library). Featured-tier background photos removed.
+- Every eyebrow sits in a translucent pill (white 14% on dark sections, navy 8% on light), hairline ring, full radius.
+- CTA 27 and CTA 7: the Relume stock photo on the section fill is replaced with a project photo under a 70% navy scrim; headline bumped to Heading/H1.
+- Features page: all buttons Primary.
