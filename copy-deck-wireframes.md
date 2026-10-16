@@ -266,3 +266,8 @@ Hours: Mon to Fri 2 to 9pm, Sat 10am to 7pm, Sun 11am to 5pm. Phone 810-206-3763
 - Pricing cards: Navy Raised with white text, hairline, 12px radius, two-layer drop shadow; the featured tier carries a photo under an 82% navy scrim and an accent-edge ring.
 - Three-item sections (Layout 239) replaced with Layout 371 bento; four-item sections (Layout 300) replaced with Layout 254 (photo centered, four points). Programs grids (Layout 240) unchanged.
 - Closing CTAs renamed: Home "Walk In. See For Yourself." · Baseball and Softball "Start With One Lesson." · Memberships "Pick A Plan. Get To Work." · Training "Pick Your Lane. Start This Week."
+
+### v2.4 (2026-10-16 late): reverted bento, recommended components in
+- Layout 371 and 254 reverted to 239 and 300 with a matching photo on every item.
+- From the "recommended components" section: Features page = Header 156 (four photo tiles) + Layout 357 (numbered four-feature list with photos, replacing four alternating sections). Training hero = Header 77 (six photos). Book a Tour hero = Header 78 (twelve-photo grid). Home Facility = Layout 370 (bento with three photos). Four-item sections on Home, Batting Cages, HitTrax and Memberships = Layout 399 (four photo cards with tag, heading, body, link).
+- Buttons: no icons/arrows anywhere, no shadows on buttons (ring and gradient kept). Pricing card shadows kept.
