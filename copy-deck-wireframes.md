@@ -240,3 +240,22 @@ About uses Team 6 (six square photo cards). Baseball and Softball Training use T
 
 ### CTA backgrounds
 CTA 27 "Content" frame renamed "Content (BG image slot)" with a Navy-to-Orange gradient placeholder until the background photo is supplied.
+
+---
+
+## v2.2 (2026-10-16): live pricing, hero rule, button rule, partner logos
+
+### Pricing pulled from the current site and Sports Carnival (verbatim, 2026-10-16)
+**Cage memberships** (ingeperformancelab.com/memberships): Bronze $99/mo, 4 × 30-min sessions · Silver $149/mo, 6 × 30-min, stack two for 60, 10% off camps and clinics · Gold $199/mo, 8 × 30-min, stack two, 10% off camps and clinics · Unlimited Hitting $299/mo, up to 1 hr/day.
+**Platinum**: Platinum $500/mo (13 and under): 12 × 30-min cage sessions, 15% off camps and clinics, The Den individual program up to 4 sessions/week, priority booking, quarterly check-ins · Platinum Elite $700/mo (14 and up): unlimited cage sessions, 15% off, The Den up to 4/week.
+**The Den**: Foundations $199/mo (13 and under) · Performance Training $400/mo (14 and up) · Drop-In $60 · 10 Sessions $450 · 20 Sessions $800.
+**Cage rentals** (Sports Carnival): 1 cage $35/30 min, $60/hr · 2 cages $55/30, $110/hr · 3 cages $80/30, $160/hr. Promo code PLAYBALL for online booking.
+**Field + Cage combos**: 1 hr $200 · 1.5 hr $230 · 2 hr $500 [confirm: looks mispriced on Sports Carnival].
+**Lessons**: Brandon Inge $200/hr, $100/30 · Rob Heumann (Lead Hitting and Fielding) $140/hr, $75/30, cage included · HP Throwing Program (Kyle Fedorka) $130/hr, $65/30 · A.J. Achter and Tim Day (pitching) $150/hr, $75/30 ($50 facility + $100 trainer) · Owen Hopkins $125/hr · Softball: Jordan Humitz $85/hr, Megan Bondy $110/hr, Taylor Wagner $130/hr (cage $50 + training fee at lesson) · HP Futures Throwing Programs from $150/person · Brandon Inge Pro Practice (offensive or defensive) $20/player/hr, 8 to 12 players.
+Hours: Mon to Fri 2 to 9pm, Sat 10am to 7pm, Sun 11am to 5pm. Phone 810-206-3763. 8101 Movie Drive, Brighton MI 48116.
+
+### Rules applied in Figma
+- No Header 44 or Header 47 anywhere. Every hero is Header 5 (detached) with a Tagline eyebrow, full-bleed photo and a 62% navy overlay.
+- Buttons: Primary = Orange. Secondary = navy gradient (#1B4A6B to #022337) with an Orange Edge stroke and white text, on every background. No gray buttons.
+- Partner logos (2SP, HP Throwing Program, Champion Mindset Group, HitTrax) are live in the Logo 2 rows on Home and Support IPL. Fifth slot hidden.
+- Memberships page now has two Pricing 18 blocks (Cage tiers / Unlimited and Platinum). Baseball and Softball Training each gained a Pricing 10 lesson-rates block.
