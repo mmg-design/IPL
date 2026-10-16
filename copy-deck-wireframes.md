@@ -259,3 +259,10 @@ Hours: Mon to Fri 2 to 9pm, Sat 10am to 7pm, Sun 11am to 5pm. Phone 810-206-3763
 - Buttons: Primary = Orange. Secondary = navy gradient (#1B4A6B to #022337) with an Orange Edge stroke and white text, on every background. No gray buttons.
 - Partner logos (2SP, HP Throwing Program, Champion Mindset Group, HitTrax) are live in the Logo 2 rows on Home and Support IPL. Fifth slot hidden.
 - Memberships page now has two Pricing 18 blocks (Cage tiers / Unlimited and Platinum). Baseball and Softball Training each gained a Pricing 10 lesson-rates block.
+
+### v2.3 (2026-10-16 pm): button spec restored, layouts, pricing cards
+- Buttons follow the design system exactly: Primary = accent fill + faint white top gradient + 1px accent-edge ring + layered navy shadows; Secondary = surface-raised fill + faint white top gradient + 1px line-strong ring + DS shadows, ink label. Every button on every page is Primary (first) or Secondary (second), Alternate off.
+- Ice lightened to #EEF3F7.
+- Pricing cards: Navy Raised with white text, hairline, 12px radius, two-layer drop shadow; the featured tier carries a photo under an 82% navy scrim and an accent-edge ring.
+- Three-item sections (Layout 239) replaced with Layout 371 bento; four-item sections (Layout 300) replaced with Layout 254 (photo centered, four points). Programs grids (Layout 240) unchanged.
+- Closing CTAs renamed: Home "Walk In. See For Yourself." · Baseball and Softball "Start With One Lesson." · Memberships "Pick A Plan. Get To Work." · Training "Pick Your Lane. Start This Week."
